@@ -25,20 +25,18 @@ Use this skill as Codex's routing brain for Seeyon/致远 work. The user may giv
 
 Codex must not jump straight into coding from memory. It should first classify the request into a Seeyon domain, locate the relevant docs, inspect the current project, then implement with the matching platform conventions.
 
-The detailed extracted document indexes live in:
+Codex should use the bundled knowledge in this order:
 
-- `references/seeyon-topic-routing-index.md` — compact topic-to-doc map for fast routing.
-- `references/seeyon-doc-full-index.md` — full extracted document title/path/file index.
+1. `knowledge/README.md` — curated requirement router and file map. Start here.
+2. `knowledge/*.md` — hand-organized topic notes for workflow, REST, CAP4, CIP, CMP, UI, ops, docs/contracts, and image-derived insights.
+3. `references/seeyon-topic-routing-index.md` — compact topic-to-doc map for fast routing.
+4. `references/seeyon-doc-full-index.md` — full extracted document title/path/file index.
+5. `resources/docs/` — raw extracted Markdown corpus for evidence and details.
+6. `resources/images/`, `resources/image-ocr.md`, `resources/image-index.json` — online-document image assets and OCR/visual notes.
 
-The source Markdown documentation is included in this repository under:
+Do **not** rely on machine-specific paths such as `/root/.hermes/cache/documents`. All reusable resources are bundled in this repo.
 
-```text
-resources/docs/
-```
-
-Codex should treat `resources/docs/` as the local documentation corpus. Do not rely on machine-specific paths such as `/root/.hermes/cache/documents`.
-
-Important bundles:
+Important raw documentation bundles:
 
 ```text
 resources/docs/v5devCTP_文档汇总.md
@@ -72,7 +70,7 @@ Do not use this skill for generic Java/Vue coding that has no Seeyon integration
 When using Codex, pass a self-contained instruction like:
 
 ```text
-You are implementing a Seeyon/致远 requirement. Load and follow the seeyon-kk-skill. First classify the user's request into one of the Seeyon domains, then search references/seeyon-topic-routing-index.md and the relevant extracted Markdown bundle under resources/docs/. Do not invent Seeyon APIs. Inspect the repo, identify its Seeyon version/module conventions, implement, and verify.
+You are implementing a Seeyon/致远 requirement. Load and follow the seeyon-kk-skill. First classify the user's request using knowledge/README.md, then read the relevant knowledge/*.md topic note, then search references/seeyon-topic-routing-index.md and the relevant extracted Markdown bundle under resources/docs/ as supporting evidence. Do not invent Seeyon APIs. Inspect the repo, identify its Seeyon version/module conventions, implement, and verify.
 
 User requirement: <需求原文>
 ```
@@ -97,7 +95,16 @@ Route to:
 - `v5devCIP` when integration platform,待办集成,事件绑定,第三方应用接入 are involved.
 - `v5devCTP` when server-side collaboration plugin/custom development is involved.
 
-Start with these docs:
+Start with curated knowledge first:
+
+```text
+knowledge/workflow-integration.md
+knowledge/api-auth-and-rest.md
+knowledge/cip-integration.md
+knowledge/cap4-customization.md
+```
+
+Then verify details in these raw docs:
 
 ```text
 seeyonapi: 表单流程集成 — /728/734.html
@@ -131,9 +138,9 @@ Ask or infer these parameters before coding:
 
 ### 2. “接口集成 / REST / OpenAPI / 三方互信 / 统一待办”
 
-Route to `seeyonapi`; combine with `v5devCIP` if the request says 集成平台/CIP.
+Route to `seeyonapi`; combine with `v5devCIP` if the request says 集成平台/CIP. Start with `knowledge/api-auth-and-rest.md` and `knowledge/workflow-integration.md`.
 
-Start docs:
+Raw docs:
 
 ```text
 seeyonapi: 调用Rest接口 — /781/
@@ -155,9 +162,9 @@ Implementation checklist:
 
 ### 3. “CIP集成 / 第三方应用 / 单点登录 / 组织同步 / 待办集成 / 事件绑定”
 
-Route to `v5devCIP` first.
+Route to `v5devCIP` first. Start with `knowledge/cip-integration.md`.
 
-Start docs:
+Raw docs:
 
 ```text
 v5devCIP: CIP集成平台-第三方应用功能说明 — /250/251.html
@@ -181,9 +188,9 @@ Implementation checklist:
 
 ### 4. “CAP表单 / 自定义控件 / 表单按钮 / 表单运行态 / 页面设计器”
 
-Route to `v5devCAP`; use `v5devUIComp` for UI widgets.
+Route to `v5devCAP`; use `v5devUIComp` for UI widgets. Start with `knowledge/cap4-customization.md` and `knowledge/ui-components.md`.
 
-Start docs:
+Raw docs:
 
 ```text
 v5devCAP: cap4自定义控件-PC端 — /94/355/359/373/376.html

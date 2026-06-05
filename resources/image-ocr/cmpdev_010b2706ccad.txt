@@ -1,0 +1,32 @@
+Naa eae Ts             RRoOeaA
+> cmp-doc                                (QI ez ARES co
+>cmprnative-proxy               申请到源码工程之后，如左侧目录，会有develop和release等目录。
+> cmp-proxy-server
+J
+> develop                        e        N
+> doc                               7    流程:
+》node medals                第一步: 安装node，版本至少8.8以上，具体可以网上搜下node安装教程。
+ET
+.gitignore                      执行grunt -V查看下版本，出现版本信息既是安装成功。
+{} cmp-front.code-workspace                     第三步:  解压CMP工程目录里面的node_ modules.zip压缩包。
+站            第四步: cd到CMP工程目录，执行grunt 1release。最后提示'1release' is finish.既是
+ CMP:        二
+Oe Area
+¥& Gruntfilejs                                          构建完成
+站                                                 ay      <=            fe _ ype          =
+eee                 构建结束之后，把release目录，拿到S3编译工具里面去执行一次编译，即可生成最终的
+@ yarn.lock                                  xc.
+Stan git CE See a
+Es) CUED
+在文件中查找 Ctrl + Shift + F
+开始调试 莱
+切换终端 ”ctrl +
+CAE                            i EIA
+Ce!                            TP> File develop/debug/css/cmp.css created.
+ed                          TP> Running “uglify:cmp2.0.0" (uglify) task
+六 村 cmp-front grunt                 TP> >> Destination (release/js/cmp-2.0.0.js) not written because src files were empty.
+Ce Teor)                    TP> Running “copy:copyToGulp" (copy) task
+@ 2create_doc                   TP> Created 2 directories, copied 3 files
+e@ _ cachebuster                   TP> Done, without errors.
+e                          TP> Executing of ‘1release’ is finish.
+       compress

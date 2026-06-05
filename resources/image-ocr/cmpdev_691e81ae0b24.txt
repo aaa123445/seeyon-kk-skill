@@ -1,0 +1,41 @@
+EE betchbuild ondis [fl ae) 163]
+7 r= hEDZhs, TOURS    FERRO AeA Mziplena as
+2 Gecho off
+3
+4 ren 动态设置相关路径参数，根据您的项目进行灵活设置
+s
+二 rem V5应用组，需要构建的应用名称，可以同时多个应用模块一起构建，每个应用模块用,号隔开，如:
+了 rem edoc, collaborationvmeeting 就可以同时构建公文、协同、会议3个应用模块
+3 0 各区20  V5应用模块组配置 (一般是指mplus-front\srcvapps\v5这个目录下的H5工程) 的应用名称，多个应用同时构建使用逗号
+10           =         隔开
+开 ”rem m3应用组，需要构建的应用名称，可以同时多个应用模块一起构建，每个应用模块用,号隔开，如:
+12 rem applicationvmy,todo 就可以同时构建应用中心、我的设置、待办3个应用模卖
+Te Set MOGROUP appLIST-applicacioa M3应用模块组配置 (一般是指mplus-frontsrcappsNm3这个目录下的H5工程) 的应用名称，多个应用同时
+15                            构建使用逗号隔开
+16 rem cmp平台代码模块，目前就只有cmp一个单独工程，如
+17 rem emp
+3
+13 set CHPGROUP_APPLIST=
+20
+21 rem 如果您需要构建V5应用模块，在这里设置你的Vs应用模块的路径，如:
+22 rem Di\developVworkspace\git\mplus-front\mplus-front\srcVvapps\v5
+3 set VS5GROUP WORESPRCE-DivdevelopVworkspace\gitvmplas-front\mplus-front\srcvappa\v5  V5应用模块源码路径
+24
+25 rem 如果您需要构建M3应用模块，在这里设置你的Ms应用模块的路径，如:
+26 rem D:\develop\workspace\git\mplus-front\mplus-front\src\apps\m3
+ea  set MSGROUP_WORKSPACE-D: \develop\workspace\git\mplus-front\mplus-front\src\apps\m3 。m3应用模块源码路径
+25 rem 如果您需要构建cp平台模块:
+30 rem D:\develop\workspace\git\mplus-front\cmp-front 说明: 此路径会被脚本自动添加release目录，release目录是cmp代码真正的构建目录
+31 set CMPGROUP_WORKSPACE=D: \develop\workspace\git\mplus-front\cmp-front
+32
+33 rem 设置微协同模式下构建后的输出路径，一般都设置成as环境的运行路径，如:
+3 rem ApacheJetspeed\webappe\seeyan\ms
+25 208 HO DISTERTEAD:\2est\R grep tin csr
+537 rem 设置M3应用zip包模型下构建后的输出路径，一般设置成as环境的运行路径，如:
+32 rem ApacheJetapeed\webapps\seeyon\n3files
+53. set NSFILES DISTPATH-D: \test\nfiles    _
+4           一                    构建成M3 应用包样式的输出路径
+a1
+Go rem S)::seysreveverevevssrey: DL ESSPRS SSSR ree reeysrrevsereserensereneeys
+43
+“4

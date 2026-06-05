@@ -1,0 +1,40 @@
+现象1 组件上面怎么使用                             现象2 业务上面怎么使用
+H5页面加载完之后，初始化                                                         eared
+一个cmp作用域的全局属性                     首次打开一个CMP组件                          HeieHicmp cindex. et获取最新
+cmp.zlndex，以及一个                   actionSheet弹出组件时                        2 cmp. zine ex.get(0获取最
+cmp.backDrop对象。                                                            ee RES
+弹出层
+dom.style.zlndex=cmp.zlndex.
+                                                                                        get()
+> emp. zIndex                                       > emp.zIndex.push()
+a                                                                                         BRASH sees
+“ w {get: f, set: f, push: f, pop: f} @     « undefined                                           eared erate
+. em: 了 多                           > emp.zIndex.get()                                                    '
+> push:  (b)                         «52
+D> set: f (b,c)                          .
+> [[prototype]]: Object              > actionSheetDom.style.zIndex = cmp.zIndex.get();|
+2                                                                            -                       自动创建蒙层是在调用cmp.zlndex push的
+vb oe         ;             组件内部首先是调用了一次cmp.zlndex.push操作， push           时候创建的。该方法里面会调用
+ER Object             操作会做2件事情:                                          cmp.backDrop.push()来创建蒙层。
+SOY Oo               1: 自动初始化一个蒙层，也就是cmp.backDrop，该              如果业务上面也想控制这个蒙层，可以使用
+rs ees oe                        backDrop容器的层级为cmp.zlndex.get0 + 1。                          cmp.backDrop方法。
+» [[Prototype]]: Object          2: zlndex内部会将默认值50的层级+2。
+、                           再通过get方法获取到最新的层级，赋值给actionSheet绊出
+’                              层的最外层容器的style zindex上面。
+|二                                                                 >》cmp-.zIndex-push()
+1                                                                                            < undefined
+SB                                                                                  >》cmp.backDrop
+”                                   当actionSheet组件销毁或者              <vbt@
+关闭时                           日 [[prototype]]: object
+cmp.zlndex: 全局的一个层级控制。                                                     maskDon: 地 ()
+cmp.backDrop: 联动cmp.zlndex展现 Dare ee
+i} SES.                             a                                        > [[Prototype]]: Object
+__ > emp.zIndex.pop()                      > emp.backDrop.maskDom()
+« undefined                        <   <div class="cmp-backdrop cmp-backdrop-compoments”style="z-index: 51;"></divy>
+actionSheet组件内部会执行: cmp.zlndex.pop(0; 事件。
+该时间内部执行2个事情:                                              三销盟时调
+1、将全局的zlndex值 - 2。                                                              于
+2、调用cmp.backDop.pop(0，也就是蒙层的层级 - 1，此                            .
+时backDrop的pop方法里面会判断，是否回到了初始值
+50，是的话则直接销绥掉蒙层。
+自此组件的调用结束

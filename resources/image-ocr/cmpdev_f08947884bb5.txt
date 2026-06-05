@@ -1,0 +1,29 @@
+6S HE 28) 4 OOH) 2 ¢| me! & &|/ BB = 1 ES BA olf otter wi 25s0)]                   _
+OO四                                               |一TOETTEWITELPI =- (function(){ //apize (NZS Manifest F MopenAppethod + ate
+下                                                                      2
+a                                                                 3
+3           "aconFiles":("defaulens"", "mules": (1),                                          5
+4        rapplane" "ER ESSHE",                                        6          this.basePach = "S(data:dependencies.mobilework)";//MRERANEE
+5          "splashscreen": ["img/spashscreenl.png","img/splashscreen2.png"],      7        +
+6        nupdate": (YcheckUpdaceUz1" 2"),                                  8
+7        npandieIdentfiex":"com.seeyan,vS.mabilework™,                     s
+8        naerviceProvidear":"seeyon",                                    soy
+8      neeam""v5",                                      n     * [打开除了入口页面的其他页面)
+1     nompShel1Version": ("403":"1.0,0", "android" 2"1.0.0"?,          2     + Garam (string) type         inessage (CRI BRR, roa tRSIMER)
+n        "packageType":"APP",                                           as       + Garam (ob3} option          [待办/消息穿透所第要的json格式实体对象]<!--
+12      version":"2.0.0",                                  14     *       id: //数据id
+a3] "entry                                                     1s       .         vote: //xseta
+14           "phone" :"hem1/index.nemi",                                  16       .         aaraType://数据关型
+15           "jsapi":"mobileWork_m api.s3js"                             17       ”/
+16         “openippliethod” :"mobiieworkapif openipp]                  18     mobiieforkaps..protocypd,openapp function (type, backUrl, option, ob3) {
+27        »                                                           1s
+18     "GompatsbieVersion":["1.0.0","1.0.1","2.0.0"1,              20       sf(Jopeson)
+1s        neppType":"defeule",                                           2             return false
+20        neppia":"3003",                                               22          1
+2        nurlSchenes" : mobi lework.vS.omp",                               23         var params = 0;
+3) 22       nbundieNane" :"mabilework",                                   24         raz penezraze0zl -~ "nz//数据穿透页面地址
+23        "eupportedPlatforms":[ "405_6.0","android_4.0"1,                  2s         ig(yperstnessage") ( //H0R SUB EH S|
+24         naesons"                                                           26               parans.trom = "message";
+las    +                                                               27          了
+                                                                        =
+i                                                                    29         it"rodo" ~- zype) (7/如果数据来自待办

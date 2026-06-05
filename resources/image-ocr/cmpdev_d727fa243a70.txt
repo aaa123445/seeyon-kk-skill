@@ -1,0 +1,27 @@
+© > ane                    22 SE REE
+.& Rare
+| canis |                                                                                            M3 appid申请单
+
+一基本信息
+BBA                         2       ARB.                        Is       peat                        &
+让请训明
+
+二.审核
+RE                        2       EE:                                Raia:                        &
+appid                                                   manifest文件                                         eo
+
+[manifestjson广本说月:
+
+1、maniiestjson文林为H5应用的身份认证文件，每个应用包都必须只备此文件
+
+您可以下载此模板六习作为您开发H5应用包的manifestjson，您可以基于此文件作各于的修改就可以作为你新开的H5应用包身份认证:
+
+3、manifestjson编写相关规范可参考开发应链接地址
+
+httpsy/opendoc seeyoncloud cormybin/wiew/technology/categoryOfTechnology/t_m3/36E736A7s%6BB%6E5968A56ABS6E7S6ABS6AF6ES%69F6BAS6E7s6A13680%6E5%6BC368036ES368
+
+FX9136E5369F3689%6E836AE6AD%6E656BC369456E736A456BA/0201562036E556A6%68236E4568D5695%6E556BC%68036E5%68F%691/#H4E093001manifest914D7F6E8BF4650E
+
+三、调整白名单
+RAR                        2      SEER                               aati                        &
+ti

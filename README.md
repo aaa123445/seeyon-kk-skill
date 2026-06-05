@@ -16,10 +16,25 @@ Codex/Hermes skill for Seeyon/致远 requirements. It helps an agent classify sh
 
 ```text
 SKILL.md
+knowledge/
+  README.md                       # curated router: start here
+  workflow-integration.md         # 流程/表单/待办
+  api-auth-and-rest.md            # REST/token/三方互信
+  cap4-customization.md           # CAP4 控件/插件/按钮
+  cip-integration.md              # CIP 应用/待办/事件/组织同步
+  cmp-mobile-h5.md                # CMP/M3/微协同 H5
+  ui-components.md                # UIComp 常用组件
+  ops-troubleshooting.md          # 运维/性能/宕机
+  document-contract.md            # 文档中心/智能合同/签章边界
+  image-derived-insights.md       # 图片 OCR + 视觉整理结论
 references/
   seeyon-topic-routing-index.md   # compact topic routing index
   seeyon-doc-full-index.md        # full extracted title/path index
   seeyon-index.json               # structured index for automation/RAG
+resources/
+  image-index.json                # image source/download/OCR index
+  image-ocr.md                    # raw OCR text from online-document images
+  images/                         # downloaded image assets
 resources/docs/
   v5devCTP_文档汇总.md
   v5devCTP_文档目录.md
@@ -51,7 +66,7 @@ Example prompt:
 用户需求：
 流程集成
 
-请先识别这是致远哪个领域的需求，然后查询 seeyon-kk-skill references 中的路由索引和相关抽取文档，不要凭空编造致远 API。最后给出实现方案、需要确认的参数、代码修改点和验证方式。
+请先用 knowledge/README.md 识别这是致远哪个领域的需求，再阅读对应 knowledge/*.md；需要细节时查询 references 路由索引和 resources/docs 原始抽取文档。不要凭空编造致远 API。最后给出实现方案、需要确认的参数、代码修改点和验证方式。
 ```
 
 ## Install into Hermes local skills
@@ -59,6 +74,7 @@ Example prompt:
 ```bash
 mkdir -p ~/.hermes/skills/seeyon-kk-skill
 cp SKILL.md ~/.hermes/skills/seeyon-kk-skill/SKILL.md
+cp -r knowledge ~/.hermes/skills/seeyon-kk-skill/
 cp -r references ~/.hermes/skills/seeyon-kk-skill/
 cp -r resources ~/.hermes/skills/seeyon-kk-skill/
 ```

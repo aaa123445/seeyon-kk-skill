@@ -1,0 +1,14 @@
+<s3:data name='cordova' />
+<script src="${data:dependencies.cmp}/js/cmp.js${data:buildversion}"></script>
+<script src="${data:dependencies.cip}/js/cip-jssdk.js${data:buildversion}"></script>
+<script src="${data:dependencies.cip}/js/cip-api.js${data:buildversion}"></script>
+Pe Sara aa EIA
+<!-- <script src="${data:dependencies.cmp}/js/cmp-app.js${data:buildversion}"></script> -->
+<!-- <script src="${data:dependencies.cmp}/js/cmp-asyncLoad.js${data:buildversion}"></script>
+<script src="${data:dependencies.cmp}/js/cmp-sortable.js${data:buildversion}"></script> -->
+<!-- 性能优化: -->
+<script src="${data:dependencies.cmp}/js/cmp-util.js${data:buildversion}"></script>
+<script src="${data:dependencies.cmp}/js/cmp-native. js${data:buildversion}" >@fseript> Fae ava aro
+<script src="${data:dependencies.cmp}/js/cmp-business.js${data:buildversion}"></script>
+<script src="${data:dependencies.commons}/js/m3-path.s3js${data:buildversion}"></script>
+<!-- seajs -->

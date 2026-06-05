@@ -1,0 +1,36 @@
+eee       ais ee | rite       see eise! 4 SO 2 Ce Mal SS atal SI Sea sea ©!
+han                                                  a
+Ste                     组织               新建           一
+-                                       2       "puildVersion":"1.0.2",
+个 国 “ M3移动H5培训课件文件 ， mobileWork初始包 ， src       vo    3      iconFiles":("defaule":"", "malta": []},
+二                                   4        "appNamen:"横竖屏移动外勤",
+a Zt                                               修改日期                   半 =              "splashscreen": ["img/spashscreenl .png", "img/splashscreen2.pag"],
+
+间                                                           6       wapdate":{"checkUpdaceUr1":""),
+
+less                                2021/7/16 0:58        ma 7          “pundleIdentifier": "com. seeyon.v5.mobilework",
+i              DD fonts                              2021/77/16 0:58        zfs          TsenviceRsoviseas":"seeyen",
+
+"eam" :"v5",
+
+oe            目 nml                               2021/7/16 0:58        XY 10          "cmpShe11Version":{"ios":"1.0,.0","android":"1.0.0"},
+          (1 iten                      2021/7/16 0:58      a) an       "packageType": "APP",
+
+img                        2021/77/16 0:58      xl) 22        "version":"2.0.0",
+           Gis                          2021/7/16 0:58      ieee eyuthemtdindae nent
+
+Bie                 menneoss al        Ee
+          [1] s3scriptjspdata              2021/7/16 0:58     x} te          SpendgEMSERSd"? "REDS IEWOFRADS OPEnAPE"
+
+.            ~
+
+—aeenliestjoon               CDauarreT707    JS] as      "appl ype": "default",
+BC)          口 mobilework m_apis3js               2018/4/26 12:19            20          “appId":"3003",
+=                                                         21        "ar1Schemes" : "mobi lework.v5.cmp",
+
+22      "pundleName" :"mobilework",
+FE)                                                 23       "supportedPlatforms":[ "i0S_6.0", "android 4.0"],
+24        "desc"
+
+6 (F)                                                        25 Ll
+es ey
