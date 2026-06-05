@@ -20,6 +20,25 @@ references/
   seeyon-topic-routing-index.md   # compact topic routing index
   seeyon-doc-full-index.md        # full extracted title/path index
   seeyon-index.json               # structured index for automation/RAG
+resources/docs/
+  v5devCTP_文档汇总.md
+  v5devCTP_文档目录.md
+  seeyonapi_文档汇总.md
+  seeyonapi_文档目录.md
+  v5devCAP_文档汇总.md
+  v5devCAP_文档目录.md
+  v5devUIComp_文档汇总.md
+  v5devUIComp_文档目录.md
+  cmpdev_文档汇总.md
+  cmpdev_文档目录.md
+  v5devCMP_文档汇总.md
+  v5devCMP_文档目录.md
+  v5devCIP_文档汇总.md
+  v5devCIP_文档目录.md
+  v5doc_文档汇总.md
+  v5doc_文档目录.md
+  v5doc2_文档汇总.md
+  v5doc2_文档目录.md
 ```
 
 ## Usage with Codex
@@ -41,6 +60,7 @@ Example prompt:
 mkdir -p ~/.hermes/skills/seeyon-kk-skill
 cp SKILL.md ~/.hermes/skills/seeyon-kk-skill/SKILL.md
 cp -r references ~/.hermes/skills/seeyon-kk-skill/
+cp -r resources ~/.hermes/skills/seeyon-kk-skill/
 ```
 
 Then start a new Hermes session so the skill loader can pick it up.

@@ -30,24 +30,26 @@ The detailed extracted document indexes live in:
 - `references/seeyon-topic-routing-index.md` — compact topic-to-doc map for fast routing.
 - `references/seeyon-doc-full-index.md` — full extracted document title/path/file index.
 
-The original extracted Markdown bundles are outside this skill under Hermes cache:
+The source Markdown documentation is included in this repository under:
 
 ```text
-/root/.hermes/cache/documents/
+resources/docs/
 ```
+
+Codex should treat `resources/docs/` as the local documentation corpus. Do not rely on machine-specific paths such as `/root/.hermes/cache/documents`.
 
 Important bundles:
 
 ```text
-v5devCTP_文档汇总.md
-seeyonapi_文档汇总.md
-v5devCAP_文档汇总.md
-v5devUIComp_文档汇总.md
-cmpdev_文档汇总.md
-v5devCMP_文档汇总.md
-v5devCIP_文档汇总.md
-v5doc_文档汇总.md
-v5doc2_文档汇总.md
+resources/docs/v5devCTP_文档汇总.md
+resources/docs/seeyonapi_文档汇总.md
+resources/docs/v5devCAP_文档汇总.md
+resources/docs/v5devUIComp_文档汇总.md
+resources/docs/cmpdev_文档汇总.md
+resources/docs/v5devCMP_文档汇总.md
+resources/docs/v5devCIP_文档汇总.md
+resources/docs/v5doc_文档汇总.md
+resources/docs/v5doc2_文档汇总.md
 ```
 
 ## When to Use
@@ -70,7 +72,7 @@ Do not use this skill for generic Java/Vue coding that has no Seeyon integration
 When using Codex, pass a self-contained instruction like:
 
 ```text
-You are implementing a Seeyon/致远 requirement. Load and follow the seeyon-kk-skill. First classify the user's request into one of the Seeyon domains, then search references/seeyon-topic-routing-index.md and the relevant extracted Markdown bundle under /root/.hermes/cache/documents. Do not invent Seeyon APIs. Inspect the repo, identify its Seeyon version/module conventions, implement, and verify.
+You are implementing a Seeyon/致远 requirement. Load and follow the seeyon-kk-skill. First classify the user's request into one of the Seeyon domains, then search references/seeyon-topic-routing-index.md and the relevant extracted Markdown bundle under resources/docs/. Do not invent Seeyon APIs. Inspect the repo, identify its Seeyon version/module conventions, implement, and verify.
 
 User requirement: <需求原文>
 ```
@@ -324,7 +326,7 @@ Implementation checklist:
 When inside a repo or shell with extracted docs available:
 
 ```bash
-DOCS=/root/.hermes/cache/documents
+DOCS=resources/docs
 rg -n "流程集成|统一待办|事项服务|Event事件" "$DOCS/seeyonapi_文档汇总.md" "$DOCS/v5devCAP_文档汇总.md" "$DOCS/v5devCIP_文档汇总.md"
 rg -n "三方互信|Rest|token|认证" "$DOCS/seeyonapi_文档汇总.md"
 rg -n "CAP4|自定义控件|表单运行态|按钮" "$DOCS/v5devCAP_文档汇总.md"
