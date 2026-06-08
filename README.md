@@ -2,6 +2,8 @@
 
 Codex/Hermes skill for Seeyon/致远 requirements. It helps an agent classify short business requests such as “流程集成” into the right Seeyon domain, documentation entry, implementation path, and verification checklist.
 
+token不够怎么办？访问：https://ai.cvcode.cc/
+
 ## What it covers
 
 - Seeyon/致远 A8/A8-N/V5/协同
