@@ -113,6 +113,25 @@ find "$OA_HOME" \( \
 
 `getData` 常见内容：附件信息、attrs、权限 auth（edit/hide）、ctrlType（自定义控件为 `suiCustomControl`）、customFieldInfo、display、enums、extra 等。
 
+## 运行态 JS 未加载排查
+
+CAP4 表单运行态会根据字段定义里的 `customFieldInfo` 下载自定义控件主 JS。Network 中完全没有对应 `runtime.js` 请求时，先查字段定义中的 `customFieldInfo.path/jsUri/nameSpace/version`，不要先调试运行态 JS 代码。
+
+`FormFieldCustomCtrl#getPCInjectionInfo()` 里的 `jsUri` 保持平台示例的静态相对路径，不要拼 `?v=时间戳` 这类 query 参数。部分 CAP4 运行态会把 `jsUri` 当资源逻辑路径处理，`js/runtime.js?v=...` 可能导致主 JS 不下载。
+
+推荐写法：
+
+```java
+@Override
+public String getPCInjectionInfo() {
+    return "{path:'apps_res/cap/customCtrlResources/<ctrl>/',jsUri:'js/runtime.js',initMethod:'init',nameSpace:'field_" + this.getKey() + "'}";
+}
+```
+
+需要破缓存时，优先重新部署资源、清浏览器缓存、重启/重扫资源，或使用文件名版本化；不要在 `jsUri` 上追加 query。
+
+带 `-` 的 UUID/key 本身不是运行态加载失败原因。CAP4 2.0 示例也允许 `csdk.component.register('myWidget-12345678', ...)` 这类标识；如同时暴露到 `window`，使用 `window[nameSpace]` 访问，避免点号访问带横线的属性。
+
 ## 表单运行态插件机制
 
 资源路径：
