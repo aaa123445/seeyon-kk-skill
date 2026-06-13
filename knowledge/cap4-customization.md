@@ -62,6 +62,29 @@ seeyon/
 5. 放置 PC 前端资源和 M3 移动资源包。
 6. 部署到 V5 环境；商城下载包通常在重启后解压部署生效。
 
+设计器左侧不显示时，先查后端发现链路，不要先调运行态 JS：
+
+- 优先按 `WEB-INF/cfgHome/component/<componentId>/pluginCfg.xml` + `spring/spring-*-manager.xml` 组织表单编辑器控件；`pluginCfg.xml` 的 `<id>`、目录名、`init()` 里的 `setPluginId(...)` 保持一致。
+- 在 Spring XML 中显式注册 `FormFieldCustomCtrl` 子类：`<bean id="..." class="..."/>`。仅靠 `@Component` 或业务 plugin 的 component-scan 可能不足以被设计器发现。
+- 覆盖无参 `canUse()` 并返回 `true`；如果现场 SDK 默认 `canUse()` 依赖 `AppContext.hasPlugin("cap4") && isValid()`，未显式覆盖可能被过滤。
+- 字段内按钮型自定义控件仍然继承 `FormFieldCustomCtrl`，不是无流程列表按钮的 `CommonBtn`。如果控件是按钮类，覆盖 `isButton()` 返回 `true`，并在 `init()` 中调用 `setButtonType(Enums.ButtonType.CustomBtn)`；当前 SDK 的 `toJsonObject()` 会在按钮类控件上读取 `getButtonType()` 写入 `btnType`。
+- `getPCInjectionInfo()` / `getMBInjectionInfo()` 影响运行态资源加载；设计器是否出现主要取决于后端 bean、`canUse()`、plugin/component 配置和实际部署产物。
+- 不要用旧包验证。确认部署到 OA 的产物里真实包含后端 class、component XML 和 `apps_res/cap/customCtrlResources/<ctrl>/` 资源；本地旧 `target/*.jar` 不含新增控件时，线上部署它必然不显示。
+
+服务器快速核验示例：
+
+```bash
+OA_HOME=/data/Seeyon/V5/ApacheJetspeed/webapps/seeyon
+find "$OA_HOME" \( \
+  -path '*/WEB-INF/classes/com/seeyon/**/<Ctrl>.class' -o \
+  -path '*/WEB-INF/cfgHome/component/<componentId>/pluginCfg.xml' -o \
+  -path '*/WEB-INF/cfgHome/component/<componentId>/spring/spring-*-manager.xml' -o \
+  -path '*/apps_res/cap/customCtrlResources/<ctrl>/js/*' \
+\) -print
+```
+
+重启后再查日志中自定义控件 `init()` 日志；没有 init 日志时，优先排查 classpath、Spring XML、component 目录和部署包是否生效。
+
 ## PC 前端规范
 
 建议结构：
